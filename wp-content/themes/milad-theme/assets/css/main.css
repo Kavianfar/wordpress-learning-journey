@@ -79,8 +79,9 @@ header h1 {
 .navbar .pic .image {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
-.navbar button {
+.navbar .nav-action button {
   align-self: center;
   height: 50px;
   width: 75px;
