@@ -3,13 +3,12 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>Milad theme</title>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
 <header>
-  <h1>My WordPress Theme</h1>
+  <h1><?php bloginfo('name'); ?></h1>
 </header>
 <nav>
   <div class="navbar">
