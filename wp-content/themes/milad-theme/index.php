@@ -6,6 +6,8 @@
 
         <article <?php post_class('post-card'); ?>>
 
+            <?php the_post_thumbnail(); ?>
+
             <h2><?php the_title(); ?></h2>
 
              <p class="post-date"><?php the_date(); ?></p>

@@ -4,20 +4,18 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to right, #19988e 0%, #985647 100%);
+  background-color: #0f172a;
+  color: white;
   padding: 40px;
   font-size: 16px;
-  text-transform: capitalize;
 }
 
 header {
-  /* background-color: rgb(212, 190, 149); */
-  background: radial-gradient(rgb(212, 190, 149), rgb(212, 190, 149));
+  background: linear-gradient(135deg, #1e293b, #334155);
 
-  color: rgb(144, 50, 0);
-  padding: 1.4rem;
-  border-radius: 0.7rem;
-  height: 50vh;
+  padding: 3rem;
+  border-radius: 1rem;
+  min-height: 300px;
 
   display: flex;
   justify-content: center;
@@ -26,7 +24,9 @@ header {
 header h1 {
   margin: auto;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 6rem;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
 }
 
 .post-card {
@@ -60,17 +60,20 @@ header h1 {
 }
 
 .navbar {
-  background: radial-gradient(rgba(0, 0, 0, 0.362), rgba(0, 0, 0, 0.141));
+  background-color: rgba(255, 255, 255, 0.08);
+
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 20px;
-  gap: 40px;
-  margin-top: 20px;
-  border-radius: 0.7rem;
-}
+  justify-content: space-between;
+  align-items: center;
 
+  padding: 20px 30px;
+  margin-top: 20px;
+
+  border-radius: 1rem;
+
+  backdrop-filter: blur(10px);
+}
 .navbar .menu {
   padding: 0;
   display: flex;
@@ -111,17 +114,34 @@ header h1 {
   width: 100%;
   object-fit: cover;
 }
-.navbar .nav-action button {
-  align-self: center;
-  height: 50px;
-  width: 75px;
-  border-radius: 10px;
+.navbar button {
+  height: 45px;
+  width: 90px;
+
+  border-radius: 12px;
   border: none;
-  font-size: 14px;
-  color: #fff;
-  background-color: rgb(51, 160, 108);
+
+  background-color: #3b82f6;
+  color: white;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+.navbar button:hover {
+  background-color: #2563eb;
 }
 
+.post-card {
+  background-color: rgba(255, 255, 255, 0.08);
+
+  padding: 24px;
+  border-radius: 1rem;
+  margin-top: 24px;
+
+  backdrop-filter: blur(8px);
+}
 footer {
   margin-top: 20px;
 }

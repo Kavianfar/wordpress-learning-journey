@@ -12,6 +12,8 @@ add_action('wp_enqueue_scripts', 'milad_theme_assets');
 
 
 function milad_theme_setup() {
+    
+    add_theme_support('post-thumbnails');
 
     register_nav_menus(array(
         'primary' => 'Primary Menu',
