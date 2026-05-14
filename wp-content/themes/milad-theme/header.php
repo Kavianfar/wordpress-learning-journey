@@ -6,7 +6,7 @@
   <title>Milad theme</title>
   <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 <header>
   <h1>My WordPress Theme</h1>

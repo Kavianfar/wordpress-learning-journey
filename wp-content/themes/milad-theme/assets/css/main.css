@@ -12,7 +12,7 @@ body {
 
 header {
   /* background-color: rgb(212, 190, 149); */
-  background: radial-gradient(rgb(212, 190, 149), rgba(212, 190, 149, 0.225));
+  background: radial-gradient(rgb(212, 190, 149), rgb(212, 190, 149));
 
   color: rgb(144, 50, 0);
   padding: 1.4rem;
@@ -29,8 +29,38 @@ header h1 {
   font-size: 6rem;
 }
 
+.post-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 24px;
+  border-radius: 16px;
+  margin-top: 24px;
+  backdrop-filter: blur(6px);
+}
+
+.post-card h2 {
+  margin-bottom: 10px;
+}
+
+.post-date {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.post-card a {
+  display: inline-block;
+  margin-top: 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.home .post-card {
+  border-left: 6px solid orange;
+}
+
 .navbar {
-  background: radial-gradient(rgba(0, 0, 0, 0.537), rgba(0, 0, 0, 0.263));
+  background: radial-gradient(rgba(0, 0, 0, 0.362), rgba(0, 0, 0, 0.141));
   width: 100%;
   display: flex;
   flex-direction: row;
