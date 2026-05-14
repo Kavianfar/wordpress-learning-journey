@@ -17,11 +17,13 @@
       <img src="https://wallpapers.com/images/featured-full/office-desk-a1yivbaxal92jim2.jpg" alt="office desk" class="image">
     </div>
 
-    <ul class="menu">
-      <li class="menu-item"><a href="#" class="menu-item-tag">home</a></li>
-      <li class="menu-item"><a href="#" class="menu-item-tag">about</a></li>
-      <li class="menu-item"><a href="#" class="menu-item-tag">contact</a></li>
-    </ul>
+       <?php
+        wp_nav_menu(array(
+            'theme_location' => 'primary',
+            'container' => false,
+            'menu_class' => 'menu',
+        ));
+       ?>
 
     <div class="nav-action">
       <button>sign in</button>
