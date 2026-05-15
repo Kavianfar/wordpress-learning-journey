@@ -27,3 +27,27 @@ function milad_theme_setup() {
 }
 
 add_action('after_setup_theme', 'milad_theme_setup');
+
+
+function milad_register_post_types() {
+
+    register_post_type('project', array(
+
+        'labels' => array(
+            'name' => 'Projects',
+            'singular_name' => 'Project',
+        ),
+
+        'public' => true,
+
+        'has_archive' => true,
+
+        'menu_icon' => 'dashicons-portfolio',
+
+        'supports' => array('title', 'editor', 'thumbnail'),
+
+    ));
+
+}
+
+add_action('init', 'milad_register_post_types');
