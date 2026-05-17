@@ -2,21 +2,21 @@
 
 <main>
 
-<?php if (have_posts()) : ?>
+    <?php if (have_posts()) : ?>
 
-    <?php while (have_posts()) : the_post(); ?>
+        <?php while (have_posts()) : the_post(); ?>
 
-        <article class="single-post">
-          <p>This is single.php</p>
-            <h1><?php the_title(); ?></h1>
+            <article class="single-post">
+                <p>This is single.php</p>
+                <h1><?php the_title(); ?></h1>
 
-            <?php the_content(); ?>
+                <?php the_content(); ?>
 
-        </article>
+            </article>
 
-    <?php endwhile; ?>
+        <?php endwhile; ?>
 
-<?php endif; ?>
+    <?php endif; ?>
 
 </main>
 

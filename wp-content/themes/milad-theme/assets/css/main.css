@@ -96,7 +96,7 @@ header h1 {
   filter: blur(0rem);
 }
 
-.navbar .menu .menu-item a{
+.navbar .menu .menu-item a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 16px;
@@ -141,6 +141,58 @@ header h1 {
   margin-top: 24px;
 
   backdrop-filter: blur(8px);
+}
+
+.project-single {
+  width: 90%;
+  max-width: 1100px;
+  margin: 60px auto;
+}
+
+.project-card {
+  background-color: #1f2740;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+
+.project-card h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.project-card p {
+  line-height: 1.8;
+}
+
+.project-meta {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #39456b;
+}
+
+.project-meta p {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.project-meta a {
+  display: inline-block;
+  background-color: #4f8cff;
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.project-meta a:hover {
+  background-color: #3d73d1;
 }
 footer {
   margin-top: 20px;
