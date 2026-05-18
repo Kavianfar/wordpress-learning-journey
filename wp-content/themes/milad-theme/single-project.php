@@ -31,6 +31,23 @@
 
           <?php endif; ?>
 
+          <?php $project_types = get_the_terms(get_the_ID(), 'project_type'); ?>
+
+          <?php if ($project_types) : ?>
+
+            <p>
+              Type:
+
+              <a href="<?php echo get_term_link($project_types[0]); ?>">
+
+                <?php echo $project_types[0]->name; ?>
+
+              </a>
+
+            </p>
+
+          <?php endif; ?>
+
         </div>
 
       </article>
