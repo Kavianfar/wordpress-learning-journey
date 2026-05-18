@@ -52,3 +52,22 @@ function milad_register_post_types()
 }
 
 add_action('init', 'milad_register_post_types');
+
+function milad_register_taxonomies()
+{
+
+    register_taxonomy('project_type', 'project', array(
+
+        'labels' => array(
+            'name' => 'Project Types',
+            'singular_name' => 'Project Type',
+        ),
+
+        'public' => true,
+
+        'hierarchical' => true,
+
+    ));
+}
+
+add_action('init', 'milad_register_taxonomies');
