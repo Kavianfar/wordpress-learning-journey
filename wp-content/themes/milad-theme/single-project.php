@@ -51,6 +51,65 @@
         </div>
 
       </article>
+      <section class="related-projects">
+
+        <h2>Related Projects</h2>
+
+        <?php if ($project_types) : ?>
+
+          <?php $current_project_type = $project_types[0]->slug; ?>
+
+          <?php
+
+          $args = array(
+
+            'post_type' => 'project',
+
+            'posts_per_page' => 3,
+
+            'post__not_in' => array(get_the_ID()),
+
+            'tax_query' => array(
+
+              array(
+
+                'taxonomy' => 'project_type',
+
+                'field' => 'slug',
+
+                'terms' => $current_project_type
+
+              )
+            )
+          );
+
+          $related_projects = new WP_Query($args); ?>
+
+
+          <?php if ($related_projects->have_posts()) : ?>
+
+            <?php while ($related_projects->have_posts()): $related_projects->the_post(); ?>
+
+              <h3> <a href="<?php the_permalink(); ?>">
+
+                  <?php the_title(); ?>
+
+                </a>
+              </h3>
+
+            <?php endwhile; ?>
+
+          <?php else : ?>
+
+            <p>No related projects found.</p>
+
+          <?php endif; ?>
+
+          <?php wp_reset_postdata(); ?>
+
+        <?php endif; ?>
+
+      </section>
 
     <?php endwhile; ?>
 
