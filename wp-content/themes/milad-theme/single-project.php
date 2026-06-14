@@ -111,6 +111,8 @@
 
       </section>
 
+      <?php do_action('milad_after_related_projects'); ?>
+
     <?php endwhile; ?>
 
   <?php endif; ?>
