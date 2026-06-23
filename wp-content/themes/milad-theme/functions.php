@@ -95,7 +95,7 @@ add_action(
 
 );
 
- 
+
 add_action(
     'milad_after_related_projects',
     'milad_project_stats',
@@ -115,9 +115,18 @@ function milad_project_archive_pagination($query)
             'posts_per_page',
             2
         );
+    }
 
+        if (
+        is_search() && $query->is_main_query()
+    ) {
+        $query->set(
+            'post_type',
+            'project'
+        );
     }
 }
+
 
 add_action(
     'pre_get_posts',

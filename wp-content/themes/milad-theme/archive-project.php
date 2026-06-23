@@ -4,6 +4,19 @@
 
   <h1>Projects Archive</h1>
 
+  <form method="GET">
+
+    <input
+      type="search"
+      name="s"
+      placeholder="Search projects...">
+
+    <button type="submit">
+      Search
+    </button>
+
+  </form>
+
   <?php if (have_posts()) : ?>
 
     <?php while (have_posts()) : the_post(); ?>
@@ -34,15 +47,15 @@
 
     <?php
 
-the_posts_pagination(array(
+    the_posts_pagination(array(
 
-    'prev_text' => '← Previous',
+      'prev_text' => '← Previous',
 
-    'next_text' => 'Next →',
+      'next_text' => 'Next →',
 
-));
+    ));
 
-?>
+    ?>
 
   <?php endif; ?>
 
