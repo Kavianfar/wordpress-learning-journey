@@ -111,7 +111,12 @@
 
       </section>
 
-      <?php do_action('milad_after_related_projects'); ?>
+      <?php do_action(
+
+        'milad_after_related_projects',
+        get_the_ID()
+        
+      ); ?>
 
     <?php endwhile; ?>
 

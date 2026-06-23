@@ -197,3 +197,35 @@ header h1 {
 footer {
   margin-top: 20px;
 }
+
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: white;
+}
+
+.page-numbers {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+.page-numbers:hover {
+  color: #4f8cff;
+}
+
+.page-numbers.current {
+  color: white;
+  font-weight: bold;
+  background-color: #4f8cff;
+  border-color: #4f8cff;
+  border-radius: 5px;
+}

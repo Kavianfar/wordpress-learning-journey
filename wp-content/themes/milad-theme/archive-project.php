@@ -32,6 +32,18 @@
 
     <?php endwhile; ?>
 
+    <?php
+
+the_posts_pagination(array(
+
+    'prev_text' => '← Previous',
+
+    'next_text' => 'Next →',
+
+));
+
+?>
+
   <?php endif; ?>
 
 </main>

@@ -72,16 +72,6 @@ function milad_register_taxonomies()
 
 add_action('init', 'milad_register_taxonomies');
 
-function milad_after_projects_message()
-{
-    echo '<p>Custom Hook Works! 🚀</p>';
-}
-
-add_action(
-    'milad_after_related_projects',
-    'milad_after_projects_message'
-);
-
 function milad_message_one()
 {
     echo '<p>Message One</p>';
@@ -103,4 +93,33 @@ add_action(
     'milad_message_two',
     5
 
+);
+
+ 
+add_action(
+    'milad_after_related_projects',
+    'milad_project_stats',
+    10,
+    1
+);
+
+function milad_project_archive_pagination($query)
+{
+    if (
+        is_post_type_archive('project')
+        &&
+        $query->is_main_query()
+    ) {
+
+        $query->set(
+            'posts_per_page',
+            2
+        );
+
+    }
+}
+
+add_action(
+    'pre_get_posts',
+    'milad_project_archive_pagination'
 );
