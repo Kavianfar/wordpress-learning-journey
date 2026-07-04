@@ -30,47 +30,7 @@ function milad_theme_setup()
 add_action('after_setup_theme', 'milad_theme_setup');
 
 
-function milad_register_post_types()
-{
 
-    register_post_type('project', array(
-
-        'labels' => array(
-            'name' => 'Projects',
-            'singular_name' => 'Project',
-        ),
-
-        'public' => true,
-
-        'has_archive' => true,
-
-        'menu_icon' => 'dashicons-portfolio',
-
-        'supports' => array('title', 'editor', 'thumbnail'),
-
-    ));
-}
-
-add_action('init', 'milad_register_post_types');
-
-function milad_register_taxonomies()
-{
-
-    register_taxonomy('project_type', 'project', array(
-
-        'labels' => array(
-            'name' => 'Project Types',
-            'singular_name' => 'Project Type',
-        ),
-
-        'public' => true,
-
-        'hierarchical' => true,
-
-    ));
-}
-
-add_action('init', 'milad_register_taxonomies');
 
 function milad_message_one()
 {
@@ -105,6 +65,11 @@ add_action(
 
 function milad_project_archive_pagination($query)
 {
+
+    if (is_admin()) {
+        return;
+    }
+
     if (
         is_post_type_archive('project')
         &&
@@ -117,7 +82,7 @@ function milad_project_archive_pagination($query)
         );
     }
 
-        if (
+    if (
         is_search() && $query->is_main_query()
     ) {
         $query->set(
