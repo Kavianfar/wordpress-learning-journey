@@ -48,3 +48,20 @@ function milad_register_taxonomies()
 }
 
 add_action('init', 'milad_register_taxonomies');
+
+
+function milad_change_project_button_text($button_text, $project_id)
+{
+    if ($project_id == 20) {
+        return 'View Source Code';
+    }
+
+    return $button_text;
+}
+
+add_filter(
+    'milad_project_button_text',
+    'milad_change_project_button_text',
+    10,
+    2
+);

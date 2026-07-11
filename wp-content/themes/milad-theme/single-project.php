@@ -26,7 +26,13 @@
           <?php if ($project_url) : ?>
 
             <a href="<?php echo $project_url; ?>" target="_blank">
-              Visit Project
+
+              <?php $button_text = apply_filters(
+                'milad_project_button_text',
+                'Visit Project',
+                get_the_ID()
+              ); ?>
+
             </a>
 
           <?php endif; ?>
@@ -115,7 +121,7 @@
 
         'milad_after_related_projects',
         get_the_ID()
-        
+
       ); ?>
 
     <?php endwhile; ?>
